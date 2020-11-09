@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20201009 13:16:35.294" rpa="false">
+<suite id="s1" name="Test" source="C:\robot-frame\test.robot">
+<test id="s1-t1" name="1.MTLSU Index">
+<kw name="Go to MTLSU">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201009 13:16:35.495" level="INFO">Opening browser 'chrome' to base url 'https://mtls5.biz/MTLSU/'.</msg>
+<status status="PASS" starttime="20201009 13:16:35.495" endtime="20201009 13:16:39.069"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201009 13:16:39.069" endtime="20201009 13:16:41.216"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" starttime="20201009 13:16:41.217" endtime="20201009 13:16:41.217"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:35.494" endtime="20201009 13:16:41.217"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:35.494" endtime="20201009 13:16:41.218" critical="yes"></status>
+</test>
+<test id="s1-t2" name="2.กรอก username และ password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_username</arg>
+<arg>00117407</arg>
+</arguments>
+<msg timestamp="20201009 13:16:41.223" level="INFO">Typing text '00117407' into text field 'id:user_username'.</msg>
+<status status="PASS" starttime="20201009 13:16:41.223" endtime="20201009 13:16:42.209"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:user_password</arg>
+<arg>BoomBom2540</arg>
+</arguments>
+<msg timestamp="20201009 13:16:42.209" level="INFO">Typing text 'BoomBom2540' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20201009 13:16:42.209" endtime="20201009 13:16:43.252"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:41.222" endtime="20201009 13:16:43.254" critical="yes"></status>
+</test>
+<test id="s1-t3" name="3.กดปุ่มเข้าสู่ระบบ">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class="btn btn-primary"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:43.265" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:43.265" endtime="20201009 13:16:48.181"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:43.262" endtime="20201009 13:16:48.182" critical="yes"></status>
+</test>
+<test id="s1-t4" name="4.กรอกค้นหารายการ &quot;เรื่อง ไล่&quot;">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=search_title</arg>
+<arg>เรื่อง ไล่</arg>
+</arguments>
+<msg timestamp="20201009 13:16:48.202" level="INFO">Typing text 'เรื่อง ไล่' into text field 'name=search_title'.</msg>
+<status status="PASS" starttime="20201009 13:16:48.202" endtime="20201009 13:16:49.262"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class="btn btn-default"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:49.264" level="INFO">Clicking element '//button[@class="btn btn-default"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:49.264" endtime="20201009 13:16:53.219"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" starttime="20201009 13:16:53.220" endtime="20201009 13:16:53.221"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:48.195" endtime="20201009 13:16:53.222" critical="yes"></status>
+</test>
+<test id="s1-t5" name="5.ค้นหาหัวข้อ &quot;MTC UNIVERSITY&quot;">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>MTC UNIVERSITY</arg>
+</arguments>
+<msg timestamp="20201009 13:16:53.548" level="INFO">Page title is 'MTC UNIVERSITY'.</msg>
+<status status="PASS" starttime="20201009 13:16:53.230" endtime="20201009 13:16:53.548"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:53.229" endtime="20201009 13:16:53.548" critical="yes"></status>
+</test>
+<test id="s1-t6" name="6.เช็คปุ่ม เปิด-เปิด ใช้งานได้หรือไม่">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="fa fa-bars tooltips"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:53.558" level="INFO">Clicking element '//div[@class="fa fa-bars tooltips"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:53.558" endtime="20201009 13:16:54.237"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<status status="PASS" starttime="20201009 13:16:54.239" endtime="20201009 13:16:54.240"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="fa fa-bars tooltips"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:54.241" level="INFO">Clicking element '//div[@class="fa fa-bars tooltips"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:54.241" endtime="20201009 13:16:54.523"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:53.553" endtime="20201009 13:16:54.524" critical="yes"></status>
+</test>
+<test id="s1-t7" name="7.นับลำดับ">
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//li[@class="sub-menu"]</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20201009 13:16:54.665" level="INFO">${count} = 8</msg>
+<status status="PASS" starttime="20201009 13:16:54.532" endtime="20201009 13:16:54.665"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//li[@class="sub-menu dcjq-parent-li"]</arg>
+</arguments>
+<assign>
+<var>${count2}</var>
+</assign>
+<msg timestamp="20201009 13:16:54.788" level="INFO">${count2} = 9</msg>
+<status status="PASS" starttime="20201009 13:16:54.665" endtime="20201009 13:16:54.788"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count}+${count2}</arg>
+</arguments>
+<assign>
+<var>${resultcount}</var>
+</assign>
+<msg timestamp="20201009 13:16:54.789" level="INFO">${resultcount} = 17</msg>
+<status status="PASS" starttime="20201009 13:16:54.788" endtime="20201009 13:16:54.789"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${resultcount}</arg>
+</arguments>
+<status status="PASS" starttime="20201009 13:16:54.790" endtime="20201009 13:16:54.791"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:54.531" endtime="20201009 13:16:54.792" critical="yes"></status>
+</test>
+<test id="s1-t8" name="8.กดปุ่มผู้เข้าชม">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@class="various tooltips"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:54.801" level="INFO">Clicking element '//a[@class="various tooltips"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:54.801" endtime="20201009 13:16:55.136"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<status status="PASS" starttime="20201009 13:16:55.137" endtime="20201009 13:16:55.138"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:54.797" endtime="20201009 13:16:55.138" critical="yes"></status>
+</test>
+<test id="s1-t9" name="9.กดออกหน้าผู้เข้าชม">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@class="fancybox-item fancybox-close"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:55.151" level="INFO">Clicking element '//a[@class="fancybox-item fancybox-close"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:55.150" endtime="20201009 13:16:59.225"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:55.147" endtime="20201009 13:16:59.227" critical="yes"></status>
+</test>
+<test id="s1-t10" name="10.กดเมนูหัวหน้าหน่วย">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@id="li_resume3"]</arg>
+</arguments>
+<msg timestamp="20201009 13:16:59.251" level="INFO">Clicking element '//a[@id="li_resume3"]'.</msg>
+<status status="PASS" starttime="20201009 13:16:59.251" endtime="20201009 13:17:03.552"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:16:59.237" endtime="20201009 13:17:03.554" critical="yes"></status>
+</test>
+<test id="s1-t11" name="11.กรอกข้อมูลหัวหน้าหน่วย">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=bookname</arg>
+<arg>test01</arg>
+</arguments>
+<msg timestamp="20201009 13:17:03.566" level="INFO">Typing text 'test01' into text field 'name=bookname'.</msg>
+<status status="PASS" starttime="20201009 13:17:03.564" endtime="20201009 13:17:09.681"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>id=openFile</arg>
+<arg>C:/Users/MTC/Downloads/score.pdf</arg>
+</arguments>
+<msg timestamp="20201009 13:17:09.683" level="INFO">Sending C:\Users\MTC\Downloads\score.pdf to browser.</msg>
+<status status="PASS" starttime="20201009 13:17:09.683" endtime="20201009 13:17:13.749"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>id=openFile2</arg>
+<arg>C:/Users/MTC/Downloads/score.pdf</arg>
+</arguments>
+<msg timestamp="20201009 13:17:13.750" level="INFO">Sending C:\Users\MTC\Downloads\score.pdf to browser.</msg>
+<status status="PASS" starttime="20201009 13:17:13.749" endtime="20201009 13:17:17.817"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:17:03.559" endtime="20201009 13:17:17.819" critical="yes"></status>
+</test>
+<test id="s1-t12" name="12.กลับไปหน้าหลัก">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@id="li_Main"]</arg>
+</arguments>
+<msg timestamp="20201009 13:17:17.828" level="INFO">Clicking element '//a[@id="li_Main"]'.</msg>
+<status status="PASS" starttime="20201009 13:17:17.828" endtime="20201009 13:17:24.140"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:17:17.827" endtime="20201009 13:17:24.143" critical="yes"></status>
+</test>
+<test id="s1-t13" name="13.เช็คจำนวนการอ่าน">
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//img[@src="icon/ok-icon.gif"]</arg>
+</arguments>
+<assign>
+<var>${count3}</var>
+</assign>
+<msg timestamp="20201009 13:17:26.194" level="INFO">${count3} = 29</msg>
+<status status="PASS" starttime="20201009 13:17:24.167" endtime="20201009 13:17:26.194"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${count3}-1</arg>
+</arguments>
+<assign>
+<var>${resultcountread}</var>
+</assign>
+<msg timestamp="20201009 13:17:26.197" level="INFO">${resultcountread} = 28</msg>
+<status status="PASS" starttime="20201009 13:17:26.196" endtime="20201009 13:17:26.197"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${resultcountread}</arg>
+</arguments>
+<status status="PASS" starttime="20201009 13:17:26.199" endtime="20201009 13:17:26.209"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:17:24.158" endtime="20201009 13:17:26.210" critical="yes"></status>
+</test>
+<test id="s1-t14" name="14.คลิกปุ่มจัดการวารสาร">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@id="li_resume5"]</arg>
+</arguments>
+<msg timestamp="20201009 13:17:26.216" level="INFO">Clicking element '//a[@id="li_resume5"]'.</msg>
+<status status="PASS" starttime="20201009 13:17:26.216" endtime="20201009 13:17:30.471"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:17:26.213" endtime="20201009 13:17:30.473" critical="yes"></status>
+</test>
+<test id="s1-t15" name="15.กรอกข้อมูลวารสาร">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=flienameshow</arg>
+<arg>test02</arg>
+</arguments>
+<msg timestamp="20201009 13:17:30.489" level="INFO">Typing text 'test02' into text field 'name=flienameshow'.</msg>
+<status status="PASS" starttime="20201009 13:17:30.489" endtime="20201009 13:17:36.652"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>monthfile</arg>
+<arg>กุมภาพันธ์</arg>
+</arguments>
+<msg timestamp="20201009 13:17:36.655" level="INFO">Selecting options from selection list 'monthfile' by label กุมภาพันธ์.</msg>
+<status status="PASS" starttime="20201009 13:17:36.654" endtime="20201009 13:17:48.812"></status>
+</kw>
+<kw name="Select From List By Index" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>monthfile</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201009 13:17:48.815" level="INFO">Selecting options from selection list 'monthfile' by index 2.</msg>
+<status status="PASS" starttime="20201009 13:17:48.814" endtime="20201009 13:18:06.986"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:17:30.488" endtime="20201009 13:18:06.988" critical="yes"></status>
+</test>
+<test id="s1-t16" name="16.ปิด browser">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201009 13:18:06.996" endtime="20201009 13:18:11.096"></status>
+</kw>
+<status status="PASS" starttime="20201009 13:18:06.995" endtime="20201009 13:18:11.098" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201009 13:16:35.296" endtime="20201009 13:18:11.113"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="0">Critical Tests</stat>
+<stat pass="16" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="16" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
